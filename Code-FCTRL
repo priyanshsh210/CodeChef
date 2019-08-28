@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+//to count no of trailing zeroes in a factorial 
+
+int main() {
+
+    //we just have to count no of 5's in no's
+
+    int cases,i,j,count=0,temp;
+    cout<<"Enter the no of test cases-"<<endl;
+    cin>>cases;
+    int test[cases];
+    for(i=0;i<cases;i++){
+        cout<<"Enter the Test Case-"<<endl;
+        cin>>test[i];}
+    for (i=0;i<cases;i++){
+        for (j=4;j<=test[i];j++){
+            if(j%5==0){
+                temp=j;
+                while (temp%5==0)
+                {
+                    temp=temp/5;
+                    count++;
+                }
+            }
+        }
+    cout<<"The No of zeroes are-"<<count<<endl;
+    count=0;
+    }
+	return 0;
+}
